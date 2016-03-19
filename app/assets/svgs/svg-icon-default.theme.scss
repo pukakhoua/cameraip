@@ -1,0 +1,28 @@
+//This is default icon color scheme. Khi xài cho các website, override lại .svg-icon bên dưới
+$iconColor1: #333;
+$iconColor2: #3D83D2;
+
+.svg-icon {
+  fill: $iconColor1; // Ta qui ước: [fill] là màu chính của icon; [color] là màu phụ của icon
+  color: $iconColor2;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 03px 0 0;
+  &.s16 {
+    width: 17px;
+    height: 17px;
+  }
+
+  &.s48 {
+    width: 48px;
+    height: 48px;
+  }
+  &.flat {
+    fill: $iconColor1;
+    color: $iconColor1;
+  }
+}
+
+

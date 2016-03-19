@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bed Store</title>
+    <base href="/">
+    <link rel='shortcut icon' type='image/x-svg' href='img/logo.svg'/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="assets/js/vendor/google-material-icons/style.css">
+    <link rel="stylesheet" href="assets/js/vendor/outline-icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="assets/js/vendor/outline-icons/Tonicons-Outline/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <!-- REVOLUTION BANNER CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="assets/js/vendor/slider-revolution/src/css/settings.css"
+          media="screen"/>
+
+    <link rel="stylesheet" href="assets/css/css.bundle.css">
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+</head>
+<body ng-cloak layout="column" ng-controller="AppCtrl as appVm"
+      ng-class="{'hide-scroll-bar':appVm.isHideBodyScrollbar,'override-padding-top':appVm.isHideTopbar}">
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<aside ui-view="sidebar"></aside>
+<div ui-view="topmenu"></div>
+<div ui-view></div>
+<div ui-view="footer"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="assets/js/app.vendor.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+
+<!-- jQuery REVOLUTION Slider  -->
+<script type="text/javascript"
+        src="assets/js/vendor/slider-revolution/src/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript"
+        src="assets/js/vendor/slider-revolution/src/js/jquery.themepunch.revolution.min.js"></script>
+
+<script src="assets/js/app.main.min.js"></script>
+<script src="assets/js/templates.min.js"></script>
+
+
+<script>
+    //    $('document').ready(function(){
+    //
+    //        // Calling LayerSlider on your selected element after the document loaded
+    //        $('#layerslider').layerSlider();
+    //    });
+</script>
+</body>
+</html>

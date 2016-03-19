@@ -1,0 +1,46 @@
+1. Nghía làm style cho popup giống như trang này: http://bonfx.com/19-top-fonts-most-preferred-by-graphic-designers-from-around-the-web/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------
+TIPS
+----------------------------------------
+layout	            Sets default layout direction unless overridden by another breakpoint.
+layout-xs	        width < 600px
+layout-gt-xs	    width >= 600px
+layout-sm	        600px <= width < 960px
+layout-gt-sm	    width >= 960px
+layout-md	        960px <= width < 1280px
+layout-gt-md	    width >= 1280px
+layout-lg	        1280px <= width < 1920px
+layout-gt-lg	    width >= 1920px
+layout-xl	        width >= 1920px
+
+
+flex                - Sets flex on all.
+flex-sm             - Sets flex on devices less than 600px wide.
+flex-gt-sm          - Sets flex on devices greater than 600px wide.
+flex-md             - Sets flex on devices between 600px and 960px wide.
+flex-gt-md          - Sets flex on devices greater than 960px wide.
+flex-lg             - Sets flex on devices between 960px and 1200px.
+flex-gt-lg          - Sets flex on devices greater than 1200px wide.

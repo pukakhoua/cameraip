@@ -1,0 +1,52 @@
+//This is partial file. A partial file should be named by '_' in prefix.
+//The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file
+
+.tool-vertical {
+  * { display: inline-block; vertical-align: middle; }
+}
+
+.tool-margin-tb-5 { margin-top: 5px; margin-bottom: 5px }
+
+.tool-margin-tb-10 { margin-top: 10px; margin-bottom: 10px }
+
+.tool-margin-tb-15 { margin-top: 15px; margin-bottom: 15px }
+
+.tool-margin-tb-20 { margin-top: 20px; margin-bottom: 20px }
+
+.tool-margin-b-5 { margin-bottom: 5px }
+
+.tool-margin-b-10 { margin-bottom: 10px }
+
+.tool-margin-b-15 { margin-bottom: 15px }
+
+.tool-margin-b-20 { margin-bottom: 20px }
+
+.tool-text-center { text-align: center }
+
+a.tool-no-decoration {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a.tool-flat { color: inherit; }
+
+.button-bar { }
+
+.button-bar.form-has-icon { padding-left: 28px }
+
+/*--------------------------------------------------
+ * OVERRIDE ANGULAR MATERIAL
+ *--------------------------------------------------*/
+md-input-container.md-input-has-messages {
+  padding-bottom: 26px;
+}
+
+md-input-container textarea.md-input { height: auto; }
+
+input:-webkit-autofill {
+  //-webkit-box-shadow: 0 0 0px 1000px white inset!important;
+  //background-color:#FFF!important;
+}
+

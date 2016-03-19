@@ -1,0 +1,35 @@
+<style>
+    md-toolbar.error { background-color: #AB0404 }
+
+    md-toolbar.error + md-dialog-content font { font-size: 14px !important; }
+
+    svg.icon-close { fill: #FFF }
+</style>
+<md-dialog aria-label="Error Popup" ng-cloak>
+    <form>
+        <md-toolbar class="error">
+            <div class="md-toolbar-tools">
+                <h2>{{::response.status}} {{::response.statusText}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="hide()" aria-label="close">
+                    <svg class="svg-icon s24 icon-close">
+                        <use xlink:href="" ng-href="/assets/svgs/svgs.svg#icon-close"></use>
+                    </svg>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <pre style="white-space: pre-line;">
+                    {{::response.data.error|json}}
+                </pre>
+
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="hide()">
+                CLOSE
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

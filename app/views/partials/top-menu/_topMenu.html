@@ -1,0 +1,52 @@
+<div class="top-menu-wrapper" ng-class="{'hide-topbar':appVm.isHideTopbar}">
+    <div class="top-bar" layout="row" layout-align="center center">
+        <div flex-gt-md="70" flex-md="100" flex-sm="100" flex-xs="100" layout="row" class="container">
+            <div flex>
+                <ol class="link-bar">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Payment Notes</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ol>
+            </div>
+            <div flex layout-align="end" layout="row">
+                <a href="#" class="shopping-cart">
+                    <span>9</span>
+                    <i class="ti-shopping-cart-full"></i>
+                </a>
+                <ol class="icon-bar">
+                    <li><a href="#"><i class="ti-facebook"></i></a></li>
+                    <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                    <li><a href="#"><i class="ti-twitter"></i></a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <md-toolbar class="main-toolbar">
+        <nav layout="column">
+            <div layout="row" layout-align="center center">
+                <div flex-gt-md="70" flex-md="100" flex-sm="100" flex-xs="100" flex-gt-lg="70" class="container">
+                    <div class="md-toolbar-tools">
+
+                        <a ui-sref="app.index" class="comp-name">
+                            <md-icon md-svg-src="assets/img/logo.svg" class="logo-icon"></md-icon>
+                            <span>BED STORE</span></a>
+                        <span flex></span>
+                        <div hide-sm  hide-xs class="menu-items">
+                            <a ui-sref="root.home" class="top-menu-item">Home</a>
+                            <a ui-sref="root.shop" class="top-menu-item">Shop</a>
+                            <a ui-sref="root.buildBed" class="top-menu-item">Build a Bed</a>
+                            <a ui-sref="root.about" class="top-menu-item">About</a>
+                            <a ui-sref="root.contact" class="top-menu-item">Contact</a>
+                        </div>
+                        <md-button class="md-icon-button btn-toggle-nav" hide-gt-sm aria-label="Toggle Nav"
+                                   ng-click="openAside()">
+                            <md-icon class="ti-menu"/>
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </md-toolbar>
+
+
+</div>

@@ -1,0 +1,141 @@
+<div layout="column">
+    <div layout="row" layout-align="center">
+        <div flex-gt-md="70" flex-md="100" flex-sm="100" flex-xs="100" class="container" style="margin: 60px 0" id="eleContactContainer">
+            <h3 class="page-title">
+                <svg class="svg-icon s48 contact">
+                    <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-face-smile"
+                         preserveAspectRatio="xMidYMid meet"></use>
+                </svg>
+                <span>Contact</span>
+            </h3>
+
+            <h4 class="please-contact-us">Please <span>contact us</span></h4>
+            <p class="tool-text-center">We understand that sometimes you need help with things that might not come
+                naturally to you,
+                which is why we offer quick and helpful support. Let’s Get in Touch!</p>
+            <div layout-gt-md="row" layout-md="column" layout-sm="column">
+                <div layout="column" flex-gt-lg="40" flex-sm="100" flex-md="100" layout-align="center">
+                    <div flex class="col">
+                        <h4 class="title">VISIT US SHOWROOM</h4>
+                        <div class="tool-vertical tool-margin-b-10">
+                            <svg class="svg-icon s16 direction">
+                                <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-direction"></use>
+                            </svg>
+                            <b>Address: </b><span>&nbsp;123 Quang Trung St., 11 Ward, Q.Go Vap Dist, HCM City</span>
+                        </div>
+                        <div class="tool-vertical tool-margin-b-10">
+                            <svg class="svg-icon s16 mobile">
+                                <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-mobile"></use>
+                            </svg>
+                            <b>Hotline: </b><span style="font-size: 18px; color: orangered;">&nbsp;0167 459 3343</span>
+                        </div>
+                        <div class="tool-vertical tool-margin-b-10">
+                            <svg class="svg-icon s16 email">
+                                <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-email"></use>
+                            </svg>
+                            <b>Email: </b>&nbsp;<a href="mailto:contact@bedstore.com"
+                                                   class="tool-no-decoration tool-flat">contact@bedstore.com</a>
+                        </div>
+                    </div>
+                    <div flex class="col">
+                        <h4 class="title">BUSINESS HOURS</h4>
+                        <div class="tool-vertical tool-margin-b-10">
+                            <svg class="svg-icon s16">
+                                <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-time"></use>
+                            </svg>
+                            <b>Monday to Friday: </b><span>&nbsp;8:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="tool-vertical tool-margin-b-10">
+                            <svg class="svg-icon s16">
+                                <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-time"></use>
+                            </svg>
+                            <b>Saturday: </b><span>&nbsp;8:00 AM - 1:00 PM</span>
+                        </div>
+                        <div class="tool-vertical tool-margin-b-10">
+                            <svg class="svg-icon s16">
+                                <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-time"></use>
+                            </svg>
+                            <b>Sunday: </b><span>&nbsp;Closed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div flex="5" hide-xs hide-sm hide-md>
+                    <!-- Spacer //-->
+                </div>
+
+
+                <div layout="row" flex-gt-lg="55" flex-md="100" flex-md="55" flex-gt-md="55">
+                    <form id="frmContact" name="contactForm" novalidate>
+                        <div flex class="col">
+                            <h4 class="title">Leave a message</h4>
+                            <div>
+                                <md-input-container class="md-icon-float md-block">
+                                    <label>Name</label>
+                                    <md-icon class="name">
+                                        <svg class="svg-icon s16 text-color">
+                                            <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-user"></use>
+                                        </svg>
+                                    </md-icon>
+                                    <input ng-model="contact.name" type="text" required name="name"
+                                    >
+                                    <div ng-messages="contactForm.name.$error"
+                                         ng-show="contactForm.name.$submitted||contactForm.name.$touched">
+                                        <div ng-message="required">Your name is required</div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-icon-float md-block">
+                                    <label>Email</label>
+                                    <md-icon class="name">
+                                        <svg class="svg-icon s16 text-color">
+                                            <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-email"></use>
+                                        </svg>
+                                    </md-icon>
+                                    <input ng-model="contact.email" type="email" required name="email"
+                                    >
+                                    <div ng-messages="contactForm.email.$error"
+                                         ng-show="contactForm.email.$submitted||contactForm.email.$touched">
+                                        <div ng-message="required">The email is required</div>
+                                        <div ng-message="email">This is not a valid email</div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container class="md-icon-float md-icon-left md-block">
+                                    <label>Messages</label>
+                                    <md-icon class="name">
+                                        <svg class="svg-icon s16 text-color flat">
+                                            <use xlink:href="" ng-href="{{::appVm.svgFile}}#icon-comment-alt"></use>
+                                        </svg>
+                                    </md-icon>
+                                <textarea columns="1" md-maxlength="500" md-no-autogrow name="message"
+                                          minlength="10" rows="5"
+                                          required maxlength="500"
+                                          ng-model="contact.messages"></textarea>
+                                    <div ng-messages="contactForm.message.$error"
+                                         ng-show="contactForm.message.$submitted||contactForm.message.$touched">
+                                        <div ng-message="required">The message is required</div>
+                                        <div ng-message="minlength">Say more informations to us!</div>
+                                    </div>
+                                </md-input-container>
+
+                            </div>
+                            <div class="button-bar form-has-icon">
+                                <md-button class="md-raised md-primary" ng-click="createContact(contact)"
+                                           ng-disabled="!canPost()">Send
+                                </md-button>
+                                <!--<md-button class="md-raised md-primary" ng-click="test()">Test-->
+                                <!--</md-button>-->
+                                <!--<md-button class="md-raised md-primary" ng-click="testPost()">Test Post-->
+                                <!--</md-button>-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

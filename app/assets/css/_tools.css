@@ -1,0 +1,14 @@
+.tool-vertical * { display: inline-block; vertical-align: middle; }
+.tool-margin-tb-5 { margin-top: 5px; margin-bottom: 5px; }
+.tool-margin-tb-10 { margin-top: 10px; margin-bottom: 10px; }
+.tool-margin-tb-15 { margin-top: 15px; margin-bottom: 15px; }
+.tool-margin-tb-20 { margin-top: 20px; margin-bottom: 20px; }
+.tool-margin-b-5 { margin-bottom: 5px; }
+.tool-margin-b-10 { margin-bottom: 10px; }
+.tool-margin-b-15 { margin-bottom: 15px; }
+.tool-margin-b-20 { margin-bottom: 20px; }
+.tool-text-center { text-align: center; }
+a.tool-no-decoration { text-decoration: none; }
+a.tool-no-decoration:hover { text-decoration: underline; }
+a.tool-flat { color: inherit; }
+.button-bar.form-has-icon { padding-left: 28px; }

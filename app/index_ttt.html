@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en"  class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js" style="padding: 0; margin: 0">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bed Store</title>
+    <base href="/">
+    <link rel='shortcut icon' type='image/ico' href='favicon.ico' />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--<link rel="stylesheet" href="assets/js/vendor/google-material-icons/style.css">-->
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/css/normalize.css">
+    <noscript><link rel="stylesheet" href="assets/css/normalize.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="libs/loaders.css/loaders.css">
+    <noscript><link rel="stylesheet" href="libs/loaders.css/loaders.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="libs/angular-material/angular-material.css">
+    <noscript><link rel="stylesheet" href="libs/angular-material/angular-material.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="libs/angular-loading-bar/build/loading-bar.css">
+    <noscript><link rel="stylesheet" href="libs/angular-loading-bar/build/loading-bar.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/js/vendor/google-material-icons/style.css">
+    <noscript><link rel="stylesheet" href="assets/js/vendor/google-material-icons/style.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/js/vendor/outline-icons/themify-icons/themify-icons.css">
+    <noscript><link rel="stylesheet" href="assets/js/vendor/outline-icons/themify-icons/themify-icons.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/js/vendor/outline-icons/Tonicons-Outline/style.css">
+    <noscript><link rel="stylesheet" href="assets/js/vendor/outline-icons/Tonicons-Outline/style.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/js/vendor/revslider/css/settings.css">
+    <noscript><link rel="stylesheet" href="assets/js/vendor/revslider/css/settings.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/svgs/svg-icon-default.theme.css">
+    <noscript><link rel="stylesheet" href="assets/svgs/svg-icon-default.theme.css"></noscript>
+
+    <link rel="preload"  onload="this.rel='stylesheet'" as="style" href="assets/css/app.css">
+    <noscript><link rel="stylesheet" href="assets/css/app.css"></noscript>
+
+    <!--<link rel="preload" href="libs/angular-material/angular-material.css" as="stylesheet" onload="this.rel='stylesheet'">-->
+    <!--<link rel="stylesheet" href="libs/angular-loading-bar/build/loading-bar.css">-->
+    <!--<link rel="stylesheet" href="libs/loaders.css/loaders.css">-->
+    <!--<link rel="stylesheet" href="assets/js/vendor/outline-icons/themify-icons/themify-icons.css">-->
+    <!--<link rel="stylesheet" href="assets/js/vendor/outline-icons/Tonicons-Outline/style.css">-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic,100,100italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>-->
+
+    <!-- REVOLUTION BANNER CSS SETTINGS -->
+    <!--<link rel="stylesheet" type="text/css" href="libs/slider-revolution/src/css/settings.css" media="screen" />-->
+
+    <!--<link rel="stylesheet" href="assets/svgs/svg-icon-default.theme.css">-->
+    <!--<link rel="stylesheet" href="assets/css/main.css">-->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js" async></script>
+    <script>
+        /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+        (function(w){
+            "use strict";
+            /* exported loadCSS */
+            var loadCSS = function( href, before, media ){
+                // Arguments explained:
+                // `href` [REQUIRED] is the URL for your CSS file.
+                // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+                // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+                // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+                var doc = w.document;
+                var ss = doc.createElement( "link" );
+                var ref;
+                if( before ){
+                    ref = before;
+                }
+                else {
+                    var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+                    ref = refs[ refs.length - 1];
+                }
+
+                var sheets = doc.styleSheets;
+                ss.rel = "stylesheet";
+                ss.href = href;
+                // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+                ss.media = "only x";
+
+                // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+                function ready( cb ){
+                    if( doc.body ){
+                        return cb();
+                    }
+                    setTimeout(function(){
+                        ready( cb );
+                    });
+                }
+                // Inject link
+                // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+                // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+                ready( function(){
+                    ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+                });
+                // A method (exposed on return object for external use) that mimics onload by polling until document.styleSheets until it includes the new sheet.
+                var onloadcssdefined = function( cb ){
+                    var resolvedHref = ss.href;
+                    var i = sheets.length;
+                    while( i-- ){
+                        if( sheets[ i ].href === resolvedHref ){
+                            return cb();
+                        }
+                    }
+                    setTimeout(function() {
+                        onloadcssdefined( cb );
+                    });
+                };
+
+                function loadCB(){
+                    if( ss.addEventListener ){
+                        ss.removeEventListener( "load", loadCB );
+                    }
+                    ss.media = media || "all";
+                }
+
+                // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+                if( ss.addEventListener ){
+                    ss.addEventListener( "load", loadCB);
+                }
+                ss.onloadcssdefined = onloadcssdefined;
+                onloadcssdefined( loadCB );
+                return ss;
+            };
+            // commonjs
+            if( typeof exports !== "undefined" ){
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }( typeof global !== "undefined" ? global : this ));
+
+        /*! CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT  */
+        (function( w ){
+            // rel=preload support test
+            if( !w.loadCSS ){
+                return;
+            }
+            var rp = loadCSS.relpreload = {};
+            rp.support = function(){
+                try {
+                    return w.document.createElement( "link" ).relList.supports( "preload" );
+                } catch (e) {
+                    return false;
+                }
+            };
+
+            // loop preload links and fetch using loadCSS
+            rp.poly = function(){
+                var links = w.document.getElementsByTagName( "link" );
+                for( var i = 0; i < links.length; i++ ){
+                    var link = links[ i ];
+                    if( link.rel === "preload" && link.getAttribute( "as" ) === "style" ){
+                        w.loadCSS( link.href, link );
+                        link.rel = null;
+                    }
+                }
+            };
+
+            // if link[rel=preload] is not supported, we must fetch the CSS manually using loadCSS
+            if( !rp.support() ){
+                rp.poly();
+                var run = w.setInterval( rp.poly, 300 );
+                if( w.addEventListener ){
+                    w.addEventListener( "load", function(){
+                        w.clearInterval( run );
+                    } );
+                }
+                if( w.attachEvent ){
+                    w.attachEvent( "onload", function(){
+                        w.clearInterval( run );
+                    } )
+                }
+            }
+        }( this ));
+    </script>
+
+</head>
+
+<body style="padding: 0; margin: 0;">
+    <div id="divLoading" style="display: table;height: 100%; width: 100%;background: #3F51B5; text-align: center; position: absolute">
+        <div class="loader-inner line-scale-pulse-out" style="display: table-cell; vertical-align: middle; margin: auto;">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+    <div ng-cloak layout="column" ng-controller="AppCtrl as appVm" ng-class="{'hide-scroll-bar':appVm.isHideBodyScrollbar,'override-padding-top':appVm.isHideTopbar}">
+        <aside ui-view="sidebar"></aside>
+        <div ui-view="topmenu"></div>
+        <div ui-view>
+
+        </div>
+        <div ui-view="footer"></div>
+    </div>
+
+
+
+    <script data-main="require.config" src="libs/requirejs/require.js" async></script>
+
+
+
+
+
+    <!--
+<script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
+
+&lt;!&ndash; In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+&ndash;&gt;
+<script src="libs/angular/angular.js"></script>
+<script src="libs/angular-cookies/angular-cookies.min.js"></script>
+&lt;!&ndash;<script src="libs/angular-route/angular-route.js"></script>&ndash;&gt;
+<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="libs/angular-animate/angular-animate.min.js"></script>
+<script src="libs/angular-aria/angular-aria.min.js"></script>
+<script src="libs/angular-messages/angular-messages.min.js"></script>
+<script src="libs/angular-material/angular-material.min.js"></script>
+
+&lt;!&ndash;<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>&ndash;&gt;
+
+&lt;!&ndash; jQuery REVOLUTION Slider  &ndash;&gt;
+<script type="text/javascript"
+        src="libs/slider-revolution/src/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="libs/slider-revolution/src/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="libs/angular-md5/angular-md5.min.js"></script>
+<script type="text/javascript" src="libs/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script src="app.js"></script>
+<script src="app.config.js"></script>
+<script src="app.ctrl.js"></script>
+
+
+<script src="assets/js/my-utils/utils.js"></script>
+<script src="assets/js/implement/ApiHttpInterceptor.js"></script>
+<script src="assets/js/services/app.service.js"></script>
+<script src="assets/js/services/session.service.js"></script>
+<script src="assets/js/services/contact.service.js"></script>
+<script src="assets/js/services/test.service.js"></script>
+
+
+<script src="views/ui/home/home.js"></script>
+<script src="views/ui/about/about.js"></script>
+<script src="views/partials/top-menu/_topMenu.js"></script>
+<script src="views/partials/sidebar/_sidebar.js"></script>
+<script src="views/ui/build-a-bed/buildABed.js"></script>
+<script src="views/ui/contact/contact.js"></script>
+
+&lt;!&ndash;SVG Sprites support cross platform&ndash;&gt;
+&lt;!&ndash;To support Internet Explorer 6-8, include the legacy script instead.&ndash;&gt;
+<script src="libs/svg4everybody/dist/svg4everybody.min.js"></script>-->
+
+
+    <script>
+        //    $('document').ready(function(){
+    //
+    //        // Calling LayerSlider on your selected element after the document loaded
+    //        $('#layerslider').layerSlider();
+    //    });
+    </script>
+</body>
+
+</html>
